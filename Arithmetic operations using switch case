@@ -1,0 +1,39 @@
+import java.io.*;
+public class First {
+    public static void main(String args[])throws Exception
+    {   BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        int a,b,c, choice;
+        System.out.println("Enter a and b values");
+        a = Integer.parseInt(br.readLine());
+        b = Integer.parseInt(br.readLine());
+        System.out.println("Select any of following choice");
+        System.out.println("1.Addition \n 2.Subtraction \n 3.Multiplication \n 4.Division");
+        choice=Integer.parseInt(br.readLine());
+        switch(choice) {
+            case 1:
+                c = a + b;
+                System.out.println("Output:"+c);
+                break;
+            case 2:
+                c = a - b;
+                System.out.println("Output:"+c);
+                break;
+            case 3:
+                c = a * b;
+                System.out.println("Output:"+c);
+                break;
+            case 4:
+                if(a!=0 && b!=0){
+                    c = a / b;
+                    System.out.println("Output:"+c);
+                    break;  }
+                else	{
+                    float d =(float)(a);
+                    float e =(float)(b);
+                    float f=d/e;
+                    System.out.println("Output:"+f);
+                    break;	}
+
+            default:
+                System.out.println("Please select correct choice");
+                break;
